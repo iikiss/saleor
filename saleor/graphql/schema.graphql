@@ -4693,6 +4693,7 @@ enum ShippingMethodTypeEnum {
 type ShippingMethodZipCodeRule implements Node {
   start: String
   end: String
+  inclusionType: ZipCodeRuleInclusionTypeEnum
   id: ID!
 }
 
@@ -5773,6 +5774,11 @@ enum WeightUnitsEnum {
   LB
   OZ
   G
+}
+
+enum ZipCodeRuleInclusionTypeEnum {
+  INCLUDE
+  EXCLUDE
 }
 
 scalar _Any
